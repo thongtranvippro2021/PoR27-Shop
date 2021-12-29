@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/styleGioiThieu.css"/>
+    <link rel="stylesheet" href="./fonts/fontawesome-free-5.15.4/css/all.min.css">
+    <title>Giới thiệu và liên hệ</title>
+</head>
+
+<body>
+    <div class="header">            
+        <div class="header-nav">
+            <div class="logo_and_header">
+                <div class="logo">
+                    <img src="./img/Trangchu/logo.png" alt="" class="image">
+                </div>
+                <ul id="header-list">
+                    <li><a href="./index.html">Trang chủ</a> </li>
+                    <li><a href="./GioiThieuvaLienHe.html">Giới thiệu</a> </li>
+                    <li><a href="./GioiThieuvaLienHe.html">Liên hệ</a></li>
+                    <li><a href="">Chăm sóc khách hàng</a></li>
+                </ul>
+            </div>
+            <div class="findSanPham">
+                <input type="text" placeholder="Tìm kiếm sản phẩm" id="inp-timKiemLoai">
+                <button type="button" onclick="timSanPham()"><i class="fas fa-search"></i></button>
+                
+            </div>
+            <div class="btn-list">
+                    <i id="btn-cart" class="fas fa-shopping-cart" onclick="hienThiGioHang()"></i>
+                    <button type="button" id = "btn-user" onclick="hienThiFormDangNhapDangKy()">Đăng nhập/ Đăng ký</button>
+                    <button type="button" id = "logOut" onclick="DangXuat()">Đăng xuất</button>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="overlay" onclick="tatOverlay()">
+        </div>
+        <div class="main-content">
+            <div class="noiDung">
+                <h2>Giới thiệu về Chúng tôi</h2>
+                <p>Tiki là một hệ sinh thái thương mại tất cả trong một, gồm các công ty thành viên như:</p>
+                <ul>
+                    <li>Công ty cổ phần R27 là đơn vị thiết lập, tổ chức sàn thương mại điện tử để các Nhà bán hàng thể tiến hành một phần hoặc toàn bộ quy trình mua bán hàng hóa, dịch vụ trên sàn thương mại điện tử.</li>
+                    <li>Công ty TNHH Tikinow Smart Logistics ("TNSL") là đơn vị cung cấp các dịch vụ logistics đầu-cuối, dịch vụ vận chuyển, dịch vụ bưu chính cho Sàn thương mại điện tử</li>
+                    <li>Công ty TNHH MTV Thương mại R27 ("R27 Trading") là đơn vị bán hàng hóa, dịch vụ trên sàn thương mại điện tử </li>
+                    <li>Đơn vị bán lẻ R27 Trading và Sàn Giao dịch cung cấp 10 triệu sản phẩm từ 26 ngành hàng phục vụ hàng triệu khách hàng trên toàn quốc.</li>
+                </ul>
+                <p>Với phương châm hoạt động “Tất cả vì Khách Hàng”, R27 luôn không ngừng nỗ lực nâng cao chất lượng dịch vụ và sản phẩm, từ đó mang đến trải nghiệm mua sắm trọn vẹn cho Khách Hàng Việt Nam với dịch vụ giao hàng nhanh trong 2 tiếng và ngày hôm sau R27Now lần đầu tiên tại Đông Nam Á, cùng cam kết cung cấp hàng chính hãng với chính sách hoàn tiền 111% nếu phát hiện hàng giả, hàng nhái.</p>
+                <p> Thành lập từ tháng 3/2010, R27.vn hiện đang là trang thương mại điện tử lọt top 2 tại Việt Nam và top 6 tại khu vực Đông Nam Á.</p>
+                <p>R27 lọt Top 1 nơi làm việc tốt nhất Việt Nam trong ngành Internet/E-commerce 2018 (Anphabe bình chọn), Top 50 nơi làm việc tốt nhất châu Á 2019 (HR Asia bình chọn).</p>
+                <h2>Thông tin về công ty</h2>
+                <ul>
+                    <li>Công ty Cổ Phần PoR27</li>
+                    <li>Địa chỉ đăng ký kinh doanh: 29/1, đường số 4, KP.3, P. Bình Khánh, Q.2, TPHCM, Việt Nam</li>
+                    <li>Giấy chứng nhận Đăng ký Kinh doanh số 0309532909 do Sở Kế hoạch và Đầu tư Thành phố Hồ Chí Minh cấp ngày 06/01/2010</li>
+                </ul>
+                <h2>Liên hệ</h2>
+                <ul>
+                    <li>Liên lạc qua điện thoại: 1900 6035</li>
+                    <li>Liên lạc qua email: Truy cập hotro.thongtran.vn</li>
+                    <li>Fanpage của R27: http://facebook.com/vanthong1909</li>
+                    <li>Đối tác có nhu cầu hợp tác quảng cáo hoặc kinh doanh: marketing@r27.vn</li>
+                    <li>Văn phòng chính: Tòa nhà Viettel, 278 Trịnh Đình Trọng, Phường Phú Trung, Quận Tân Phú, Thành phố Hồ Chí Minh.</li>
+                    <li>Văn phòng: KDC 2, Lâm Bình, Phổ Cường, Đức Phổ, Quảng Ngãi.</li>
+                </ul>
+                <div class="video">
+                    <iframe width="642" height="361" src="https://www.youtube.com/embed/UmnoWQzkuv4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="modal-cart">
+                <div class="main-Cart">
+                    <div class="body-cart">
+                        <div class="cart-row">
+                            <span class="cart-item cart-header cart-column">Sản Phẩm</span>
+                            <span class="cart-price cart-header cart-column">Giá</span>
+                            <span class="cart-quantity cart-header cart-column">Số Lượng</span>
+                        </div>
+                        <div class="cart-items">
+                        </div>
+                    </div>
+                    <div class="cart-total">
+                        <div class="total-money">
+                            <strong class="cart-total-title">Tổng Cộng:</strong>
+                            <span class="cart-total-price">0 VNĐ</span>
+                        </div>
+                        <button class="btn-order">MUA HÀNG</button>
+                    </div>
+                </div>
+            </div>
+            <div class="form-total">
+                <div class="form-register">
+                    <h2>Đăng ký</h2>
+                    <div class="social-container">
+                            <a href="" class="social"><i class="fab fa-facebook-f"></i></a>
+                            <a href="" class="social"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="" class="social"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <span>hoặc bằng tài khoản của bạn</span>
+                    <form id="formRegister">
+                        <input type="email" placeholder="Email" id="rgt-email" />
+                        <input type="password" placeholder="Mật khẩu" id="rgt-password">
+                        <input type="password" placeholder="Xác nhận mật khẩu" id="rgt-re-password">
+                        <button type="button" id="btn-dangky" onclick="validateDangKy()">Đăng ký</button>
+                    </form>
+                    <button type="button" id="log_In" onclick="FormDangKyToDangNhap()">Đăng nhập</button>
+                </div>
+                <div class="form-login">
+                    <h2>Đăng nhập</h2>
+                    <div class="social-container">
+                            <a href="" class="social"><i class="fab fa-facebook-f"></i></a>
+                            <a href="" class="social"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="" class="social"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    <span>hoặc bằng tài khoản của bạn</span>
+                    <form id="formLogin">
+                        <input type="email" placeholder="Email" id="login-email" />
+                        <input type="password" placeholder="Mật khẩu" id="login-password">
+                        <button type="button" id="logIn" onclick="validateDangNhap()">Đăng nhập</button>
+                    </form>
+                    <a href="#" id="forgotPass">Quên mật khẩu ?</a>
+                    <button type="button" id="regisTer" onclick="FormDangNhapToDangKy()">Đăng ký</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="main-footer">
+            <div class="body-footer">
+                <div class="footer-lienhe">
+                    <h3 class="head-text-footer">Liên hệ với R27</h3>
+                    <ul>
+                        <li><a href="">Hotline & Chat trực tuyến (24/7)</a></li>
+                        <li><a href="">Trung tâm hỗ trợ</a></li>
+                        <li><a href="">Hướng dẫn đặt hàng</a></li>
+                        <li><a href="">Giao hàng & Nhận hàng</a></li>
+                        <li><a href="">Chính sách hàng nhập khẩu</a></li>
+                        <li><a href="">Hướng dẫn đổi trả hàng</a></li>
+                    </ul>
+                </div>
+                <div class="footer-thongtin">
+                    <h3 class="head-text-footer">R27 Việt Nam</h3> 
+                    <ul>
+                        <li><a href="">Về R27 Việt Nam</a></li>
+                        <li><a href="">Tuyển dụng</a></li>
+                        <li><a href="">Điều khoảng sử dụng</a></li>
+                        <li><a href="">Chính sách bảo mật</a></li>
+                        <li><a href="">Báo chí</a></li>
+                        <li><a href="">Quy chế hoạt động</a></li>
+                        <li><a href="">Quy trình giải quyết khiếu nại</a></li>
+                    </ul>
+                </div>        
+                <div class="footer-chitiet">
+                    <div class="chitiet-img">
+                        <img src="./img/Trangchu/logo.png" alt="">
+                        <img src="./img/Trangchu/appsotre.png" alt="">
+                        <img src="./img/Trangchu/chplay.png" alt="">
+                    </div>
+                    <div class="chitiet-thongtin">
+                        <div class="thongtin-section1">
+                            <b> Địa Chỉ Và Thông Tin Liên Hệ </b>
+                            <div>
+                                <div>
+                                    <i class="fas fa-envelope"></i>
+                                    <p>thongtranr27@gmail.com</p>
+                                </div>
+                                <div>
+                                    <i class="fas fa-phone-alt"></i>
+                                    <p>0842190902</p>
+                                </div>
+                                <div>
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <p>KDC2, Lâm Bình, Phổ Cường, Đức Phổ, Quảng Ngãi</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="thongtin-section2">
+                            <p><b>CÔNG TY TNHH POR27</b></p>
+                            <p>Giấy CNĐKDN: 0308808576 – Ngày cấp: 22/12/2021, được sửa đổi lần thứ 19 ngày 27/12/2021.</p>
+                            <p>Cơ quan cấp: Phòng Đăng ký kinh doanh – Sở kế hoạch và Đầu tư TP.HCM</p>
+                            <p>Địa chỉ đăng ký kinh doanh: 278 Trịnh Đình Trọng, Phường Phú Trung, Quận Tân Phú, Tp. Hồ Chí Minh, Việt Nam.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sub-footer">
+            <p><span>Powered by @</span> Thông Trần</p>
+        </div>
+    </div> 
+    <script src="./javascript/script.js"></script>
+</body>
+</html>

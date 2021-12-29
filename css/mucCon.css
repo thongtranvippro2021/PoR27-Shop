@@ -1,0 +1,17 @@
+.category a
+{
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+    border-top: 1px solid #809c8b;
+    font-size: 1rem;
+    text-align: center;
+    color: rgb(20, 20, 20);
+}
+.category a:hover
+{
+    cursor: pointer;
+    background-color: var(--main-color);
+    color: #fff;
+}

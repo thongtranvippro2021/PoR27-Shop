@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nước suối, nước khoáng</title>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="stylesheet" href="./css/mucCon.css">
+    <link rel="stylesheet" href="./fonts/fontawesome-free-5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <div class="header">            
+        <div class="header-nav">
+            <div class="logo_and_header">
+                <div class="logo">
+                    <img src="./img/Trangchu/logo.png" alt="" class="image">
+                </div>
+                <ul id="header-list">
+                    <li><a href="./index.html">Trang chủ</a> </li>
+                    <li><a href="./GioiThieuvaLienHe.html">Giới thiệu</a> </li>
+                    <li><a href="./GioiThieuvaLienHe.html">Liên hệ</a></li>
+                    <li><a href="">Chăm sóc khách hàng</a></li>
+                </ul>
+            </div>
+            <div class="findSanPham">
+                <input type="text" placeholder="Tìm kiếm sản phẩm" id="inp-timKiemLoai">
+                <button type="button" onclick="timSanPham()"><i class="fas fa-search"></i></button>
+                
+            </div>
+            <div class="btn-list">
+                    <i id="btn-cart" class="fas fa-shopping-cart" onclick="hienThiGioHang()"></i>
+                    <button type="button" id = "btn-user" onclick="hienThiFormDangNhapDangKy()">Đăng nhập/ Đăng ký</button>
+                    <button type="button" id = "logOut" onclick="DangXuat()">Đăng xuất</button>
+            </div>
+        </div>
+    </div>
+    <div class="anh-bia">
+        <div id="anh-chinh">
+            <img src="./img/Trangchu/biachinh1.png">
+        </div>
+    </div>
+    <h2>Danh mục sản phẩm: Nước suối, Nước khoáng</h2>
+    <div class="content">
+        <div class="overlay" onclick="tatOverlay()">
+        </div>
+        <div class="sub-content">
+            <div class="category">
+                <h4>Danh mục sản phẩm</h2>
+                <div class="list-category">
+                    <a href="./NuocNgot.html">Nước ngọt các loại</a>
+                    <a href="./Caffe.html">Caffe các loại</a>
+                    <a href="./NuocTraiCay.html">Nước trái cây</a>
+                    <a href="./NuoiSuoiNuocKhoang.html">Nước khoáng</a>
+                    <a href="./Tangluc.html">Nước tăng lực các loại</a>
+                    <a href="./Bia.html">Bia các loại</a>
+                    <a href="./Trasua.html">Trà sữa các loại</a>
+                    <a href="./Ruou.html">Rượu các loại</a>
+                </div>
+            </div>
+            <div class="findDiv">
+                <h4>Tìm kiếm chi tiết</h4>
+                <input type="text" placeholder="Nhập tên sản phẩm" id="inp-timKiemNangCao">
+                <h5>Chọn Khoảng Giá</h5>
+                <div class="khoangGia">
+                    <input type="number" id="giaBegin">
+                    <h5>-</h5>
+                    <input type="number" id="giaEnd">
+                </div>
+                <h5>thuộc Danh mục</h5>
+                <div class="selectMuc">
+                    <select name="" id="list-Muc">
+                        <option value="tat-ca">Tất cả sản phẩm</option>
+                        <option value="suoikhoangcovi">Nước uống có vị</option>
+                        <option value="suoikhoangkhongvi">Nước uống không vị</option>
+                    </select>
+                </div>
+                <button type="button" id="btn-findDiv" onclick="timSanPhamNangCao()">TÌM NGAY</button>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="products">
+                <ul class="prd-list">
+                    <li class="main-product nuoc-suoi suoikhoangkhongvi">
+                        <div class="img-product">
+                            <img class="img-prd"
+                                src="./img/Trangchu/11.jpg"
+                                alt="">
+                        </div>
+                        <div class="content-product">
+                            <h3 class="content-product-h3">6 chai nước khoáng i-on Pocari Sweat 500ml</h3>
+                            <div class="content-product-deltails">
+                                <div class="price">
+                                    <span class="money">120000đ</span>
+                                </div>
+                                <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="main-product nuoc-suoi suoikhoangcovi">
+                        <div class="img-product">
+                            <img class="img-prd"
+                                src="./img/NuocSuoiNuocKhoang/1.jpg"
+                                alt="">
+                        </div>
+                        <div class="content-product">
+                            <h3 class="content-product-h3">6 chai nước uống Good Mood vị cam 455ml</h3>
+                            <div class="content-product-deltails">
+                                <div class="price">
+                                    <span class="money">60000đ</span>
+                                </div>
+                                <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="main-product nuoc-khoang suoikhoangkhongvi">
+                        <div class="img-product">
+                            <img class="img-prd"
+                                src="./img/Trangchu/8.jpg"
+                                alt="">
+                        </div>
+                        <div class="content-product">
+                            <h3 class="content-product-h3">Thùng 24 chai nước khoáng có ga Vĩnh Hảo 500ml</h3>
+                            <div class="content-product-deltails">
+                                <div class="price">
+                                    <span class="money">118000đ</span>
+                                </div>
+                                <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="modal-cart">
+                <div class="main-Cart">
+                    <div class="body-cart">
+                        <div class="cart-row">
+                            <span class="cart-item cart-header cart-column">Sản Phẩm</span>
+                            <span class="cart-price cart-header cart-column">Giá</span>
+                            <span class="cart-quantity cart-header cart-column">Số Lượng</span>
+                        </div>
+                        <div class="cart-items">
+                        </div>
+                    </div>
+                    <div class="cart-total">
+                        <div class="total-money">
+                            <strong class="cart-total-title">Tổng Cộng:</strong>
+                            <span class="cart-total-price">0 VNĐ</span>
+                        </div>
+                        <button class="btn-order">MUA HÀNG</button>
+                    </div>
+                </div>
+            </div>
+            <div class="form-total">
+                <div class="form-register">
+                    <h2>Đăng ký</h2>
+                    <div class="social-container">
+                            <a href="" class="social"><i class="fab fa-facebook-f"></i></a>
+                            <a href="" class="social"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="" class="social"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <span>hoặc bằng tài khoản của bạn</span>
+                    <form id="formRegister">
+                        <input type="email" placeholder="Email" id="rgt-email" />
+                        <input type="password" placeholder="Mật khẩu" id="rgt-password">
+                        <input type="password" placeholder="Xác nhận mật khẩu" id="rgt-re-password">
+                        <button type="button" id="btn-dangky" onclick="validateDangKy()">Đăng ký</button>
+                    </form>
+                    <button type="button" id="log_In" onclick="FormDangKyToDangNhap()">Đăng nhập</button>
+                </div>
+                <div class="form-login">
+                    <h2>Đăng nhập</h2>
+                    <div class="social-container">
+                            <a href="" class="social"><i class="fab fa-facebook-f"></i></a>
+                            <a href="" class="social"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="" class="social"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    <span>hoặc bằng tài khoản của bạn</span>
+                    <form id="formLogin">
+                        <input type="email" placeholder="Email" id="login-email" />
+                        <input type="password" placeholder="Mật khẩu" id="login-password">
+                        <button type="button" id="logIn" onclick="validateDangNhap()">Đăng nhập</button>
+                    </form>
+                    <a href="#" id="forgotPass">Quên mật khẩu ?</a>
+                    <button type="button" id="regisTer" onclick="FormDangNhapToDangKy()">Đăng ký</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="main-footer">
+            <div class="body-footer">
+                <div class="footer-lienhe">
+                    <h3 class="head-text-footer">Liên hệ với R27</h3>
+                    <ul>
+                        <li><a href="">Hotline & Chat trực tuyến (24/7)</a></li>
+                        <li><a href="">Trung tâm hỗ trợ</a></li>
+                        <li><a href="">Hướng dẫn đặt hàng</a></li>
+                        <li><a href="">Giao hàng & Nhận hàng</a></li>
+                        <li><a href="">Chính sách hàng nhập khẩu</a></li>
+                        <li><a href="">Hướng dẫn đổi trả hàng</a></li>
+                    </ul>
+                </div>
+                <div class="footer-thongtin">
+                    <h3 class="head-text-footer">R27 Việt Nam</h3> 
+                    <ul>
+                        <li><a href="">Về R27 Việt Nam</a></li>
+                        <li><a href="">Tuyển dụng</a></li>
+                        <li><a href="">Điều khoảng sử dụng</a></li>
+                        <li><a href="">Chính sách bảo mật</a></li>
+                        <li><a href="">Báo chí</a></li>
+                        <li><a href="">Quy chế hoạt động</a></li>
+                        <li><a href="">Quy trình giải quyết khiếu nại</a></li>
+                    </ul>
+                </div>        
+                <div class="footer-chitiet">
+                    <div class="chitiet-img">
+                        <img src="./img/Trangchu/logo.png" alt="">
+                        <img src="./img/Trangchu/appsotre.png" alt="">
+                        <img src="./img/Trangchu/chplay.png" alt="">
+                    </div>
+                    <div class="chitiet-thongtin">
+                        <div class="thongtin-section1">
+                            <b> Địa Chỉ Và Thông Tin Liên Hệ </b>
+                            <div>
+                                <div>
+                                    <i class="fas fa-envelope"></i>
+                                    <p>thongtranr27@gmail.com</p>
+                                </div>
+                                <div>
+                                    <i class="fas fa-phone-alt"></i>
+                                    <p>0842190902</p>
+                                </div>
+                                <div>
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <p>KDC2, Lâm Bình, Phổ Cường, Đức Phổ, Quảng Ngãi</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="thongtin-section2">
+                            <p><b>CÔNG TY TNHH POR27</b></p>
+                            <p>Giấy CNĐKDN: 0308808576 – Ngày cấp: 22/12/2021, được sửa đổi lần thứ 19 ngày 27/12/2021.</p>
+                            <p>Cơ quan cấp: Phòng Đăng ký kinh doanh – Sở kế hoạch và Đầu tư TP.HCM</p>
+                            <p>Địa chỉ đăng ký kinh doanh: 278 Trịnh Đình Trọng, Phường Phú Trung, Quận Tân Phú, Tp. Hồ Chí Minh, Việt Nam.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sub-footer">
+            <p><span>Powered by @</span> Thông Trần</p>
+        </div>
+    </div> 
+    <script src="./javascript/script.js"></script>
+</body>
+</html>

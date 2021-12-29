@@ -1,0 +1,482 @@
+
+:root{
+    --text-color: #fff ;
+    --main-color: #1ba04e;
+    --boldmain-color:#14803d;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;   
+}
+
+.image
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header{
+    height: 3.75rem;
+    background-color: var(--main-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+.header-nav
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.logo
+{
+  width: 115px;
+  margin-left: 25px;
+}
+#header-list{
+    list-style: none;
+    display: flex;
+    margin-left: 25px;
+}
+
+#header-list a{
+    text-decoration: none;
+    color: var(--text-color);
+    line-height: 3.75rem;
+    padding: 0px 10px;
+    display: inline-block;
+}
+#header-list a:hover{
+    background-color: var(--boldmain-color);
+    color: var(--text-color);
+}
+.logo_and_header
+{
+  display: flex;
+  justify-content: flex-start;
+}
+.logo img{
+  margin-top: 2px;
+  object-fit: contain;
+}
+.btn-list{
+    border: none;
+    display: flex;
+    align-items: center;
+}
+#logOut, #btn-user
+{
+  color: var(--text-color);
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--text-color);
+  background: none;
+  margin-right: 25px;
+  display: none;
+}
+#btn-user
+{
+  display: block;
+}
+#logOut:hover,
+#btn-user:hover
+{
+  cursor: pointer;
+}
+
+#btn-cart{
+    color: var(--text-color);
+    font-size: 1.5rem;
+    margin-right: 25px;
+    
+}
+
+#btn-cart:hover{
+    color: rgb(231, 231, 231);
+    cursor: pointer;
+}
+.findSanPham
+{
+  display: flex;
+  align-items: center;
+  width: 25%;
+}
+.findSanPham input
+{
+  padding: 10px 0px 10px 10px;
+  border-radius: 5px;
+  border: 1px;
+  flex: 1;
+}
+.findSanPham button
+{
+  margin-left: 5px;
+  color: var(--boldmain-color);
+  font-size: 1rem;
+  background-color: #fff;
+  padding: 8px;
+  border: 1px;
+  border-radius: 5px;
+  
+}
+.findSanPham button:hover
+{
+  background-color: rgb(240, 240, 240);
+  cursor: pointer;
+}
+
+
+
+/* wrapper */
+.overlay
+{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(190, 190, 190,0.5);
+  display: none;
+
+}
+.content {
+  padding: 1.5rem;
+  margin-top: 3rem;
+}
+h2
+{
+  text-transform: uppercase;
+  margin: 20px 0 10px 0;
+}
+.noiDung ul
+{
+    list-style-type: disc;
+    padding-left: 16px;
+}
+.noiDung ul li,
+.noiDung p
+{
+    line-height: 22px;
+    margin-bottom: 6px;
+}
+.video
+{
+    margin-top: 25px;
+}
+/* Phan Modal */
+.modal-cart,
+.form-total
+{
+  position: fixed;
+  top: 3.75rem;
+  right: 0;
+  bottom: 0;
+  width: 700px;
+  overflow-x: scroll;
+  background-color: #fff;
+  box-shadow: 5px 8px 13.92px 2.08px rgb(0 0 0 / 10%);
+  z-index : 1;
+  border-radius: 5px;
+  display: none;
+}
+
+.main-Cart
+{
+  padding: 10px;
+}
+.cart-total
+{
+    text-align: center;
+}
+.cart-row
+{
+  display: flex;
+  justify-content: space-between;
+}
+.cart-item,
+.cart-quantity
+{
+  width: 40%;
+}
+.cart-quantity
+{
+  padding-left: 100px;
+}
+.cart-header {
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.cart-column {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.cart-item-image
+{
+  object-fit: cover;
+}
+.cart-item-title
+{
+  margin-left: 15px;
+}
+.cart-quantity-input
+{
+  width: 60px;
+  padding: 5px ;
+  border-radius: 4px;
+  margin-right: 25px;
+}
+.btn-danger
+{
+  width: 60px;
+  padding: 5px ;
+  border-radius: 4px;
+  margin-right: 25px;
+  border: none;
+  background-color: rgb(230, 59, 59);
+  color: #fff;
+  font-weight: bold;
+}
+.btn-danger:hover
+{
+  background-color: rgb(161, 21, 21);
+  cursor: pointer;
+}
+
+.cart-total .total-money
+{
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+.btn-order
+{
+    margin-top: 20px;
+    width: 100%;
+    padding: 15px 0;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
+    letter-spacing: 1px;
+    background-color: var(--main-color);
+}
+.btn-order:hover
+{
+    background-color: var(--boldmain-color);
+    cursor: pointer;
+}
+
+
+/* Phan Dang Nhap Dang Ky */
+.form-total
+{
+  width: 420px;
+  text-align: center;
+}
+.form-login
+{
+  display: block;
+}
+.form-register
+{
+  display: none;
+}
+.form-total a
+{
+  text-decoration: none;
+  color: #333;
+}
+#formLogin input,
+#formLogin button,
+#regisTer,
+#log_In,
+#formRegister input,
+#formRegister button
+{
+  display: block;
+  width: 80%;
+  margin: auto;
+  margin-top: 8px;
+  padding: 15px 10px;
+  border-radius: 5px;
+  border: 1px solid var(--main-color);
+}
+.form-total button
+{
+  background-color: var(--main-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-color);
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+
+}
+#regisTer,
+#log_In
+{
+  background-color: #fff;
+  color: var(--main-color);
+  margin-top: 30px;
+}
+#regisTer:hover,
+#log_In:hover
+{
+  background-color: rgb(238, 238, 238);
+  color: var(--main-color);
+  cursor: pointer;
+}
+#formLogin button,
+#formRegister button
+{
+  margin-top: 20px  ;
+  margin-bottom: 8px;
+}
+#formLogin button:hover,
+#formRegister button:hover
+{
+  background-color: var(--boldmain-color);
+  cursor: pointer;
+}
+.form-total h2
+{
+  color: #333;
+  font-size: 2rem;
+  margin: 50px 0 10px 0px;
+  color: var(--main-color);
+}
+.social-container i
+{
+  border: 1px solid var(--main-color);
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  height: 35px;
+  width: 35px;
+  margin-bottom: 10px;
+}
+#forgotPass
+{
+  font-size: 0.9rem;
+  color: #0e4e27;
+}
+
+/* PHAN FOOTER */
+.footer{
+  margin-top: 25px;
+  background-color: rgb(241, 241, 241);
+}
+.main-footer{
+  padding: 2rem 1.5rem;
+}
+.body-footer
+{
+  display: flex;
+  color: rgb(14, 14, 14);
+  font-size: 0.9rem;
+}
+.footer-lienhe,
+.footer-thongtin
+{
+  width: 25%;
+}
+
+.footer-chitiet
+{
+  width: 50%;
+}
+
+
+
+
+
+/* Footer-lienhe Footer-thongtin */
+.footer-lienhe a,
+.footer-thongtin a
+{
+  text-decoration: none;
+  color: rgb(14, 14, 14);
+  line-height : 27px;
+}
+.footer-lienhe a:hover,
+.footer-thongtin a:hover
+{
+  color: rgb(161, 161, 161);
+}
+.footer-lienhe ul,
+.footer-thongtin ul
+{
+  margin-top: 10px;
+  list-style: none;
+}
+
+/* Footer-chitiet */
+
+.chitiet-img
+{
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.chitiet-img img
+{
+  width: 25%;
+  height: 100%;
+  object-fit: contain;
+}
+.chitiet-thongtin
+{
+  display: flex;
+}
+.thongtin-section1
+{
+  width: 40%;
+}
+.thongtin-section1 >div >div
+{
+  display: flex;
+  margin-top: 15px;
+}
+.thongtin-section1 >div >div i
+{
+  margin-right: 10px;
+}
+.thongtin-section2
+{
+  width: 60%;
+}
+.thongtin-section2 p
+{
+  margin-bottom: 10px;
+}
+
+/* PHAN BAN QUYEN */
+.sub-footer{
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  text-align: center;
+  padding-bottom: 30px;
+}
+.sub-footer span{
+  color: rgb(104, 104, 104);
+}
+
